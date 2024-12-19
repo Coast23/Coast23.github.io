@@ -1,34 +1,502 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Hello World</title>
-    <url>/2024/12/16/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Coast23">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+    
+        
+        
+        
+            <link rel="preconnect" href="https://registry.npmmirror.com" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://coast23.github.io/2024/12/19/一道简单的单表代换加密/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一道简单的单表代换加密">
+<meta property="og:url" content="https://coast23.github.io/2024/12/19/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%95%E8%A1%A8%E4%BB%A3%E6%8D%A2%E5%8A%A0%E5%AF%86/index.html">
+<meta property="og:site_name" content="Coast23&#39;s Blog">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://coast23.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2024-12-19T11:16:29.000Z">
+<meta property="article:modified_time" content="2024-12-19T15:20:44.858Z">
+<meta property="article:author" content="Coast23">
+<meta property="article:tag" content="Crypto">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://coast23.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/favicon3/favicon.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon3/favicon.ico">
+    <meta name="theme-color" content="#66CCFF">
+    <link rel="shortcut icon" href="/images/favicon3/favicon.ico">
+    <!--- Page Info-->
+    
+    <title>
+        
+            一道简单的单表代换加密 | Coast23&#39;s Blog
+        
+    </title>
 
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/Chillax/chillax.css">
 
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+    <!--- Inject Part-->
+    
 
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>一道简单的单表代换加密</title>
-    <url>/2024/12/19/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%95%E8%A1%A8%E4%BB%A3%E6%8D%A2%E5%8A%A0%E5%AF%86/</url>
-    <content><![CDATA[<p>学长的大作业, 感觉还挺有意思的, 遂记录之.</p>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/css/build/tailwind.css">
+    
+
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"coast23.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":4,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#66CCFF","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":"One day, in retrospect, the years of struggle will strike you as the most beautiful."},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Hello World!","subtitle":{"text":["One day, in retrospect, the years of struggle will strike you as the most beautiful."],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":50,"backing_speed":30,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":"https://github.com/Coast23","instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":true,"color":{"left":"#f78736","right":"#367df7","transparency":30},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"书签":{"path":"/bookmarks","icon":"fa-regular fa-bookmark"},"About":{"path":"/about","icon":"fa-regular fa-user"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"Always continue, never break.","show_on_mobile":true,"links":{"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":10},"tags":{"enable":true,"limit":10}},"footerStart":"2024/12/16 18:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/sharp-solid.min.css">
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+                <a class="logo-image h-8 w-8 sm:w-10 sm:h-10 mr-3" href="/">
+                    <img src="/images/favicon3/android-chrome-512x512.png" class="w-full h-full rounded-sm">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Coast23&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-regular fa-folder fa-fw"></i>
+                                    分类
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/bookmarks"
+                                        >
+                                    <i class="fa-regular fa-bookmark fa-fw"></i>
+                                    书签
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                分类
+                            </span>
+                            
+                                <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/bookmarks"
+                        >
+                            <span>
+                                书签
+                            </span>
+                            
+                                <i class="fa-regular fa-bookmark fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-regular fa-user fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">1</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">1</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">一道简单的单表代换加密</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/avatar.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Coast23</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-12-19 19:16:29</span>
+        <span class="mobile">2024-12-19 19:16:29</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-12-19 23:20:44</span>
+            <span class="mobile">2024-12-19 23:20:44</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/CTF/">CTF</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Crypto/">Crypto</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.1k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>14 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<p>学长的大作业, 感觉还挺有意思的, 遂记录之.</p>
 <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>已知明文节选自《聊斋志异》, 转为拼音后进行<code>单表加密</code>, 现要根据密文进行解密. </p>
 <p>密文如下:</p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">LRZRLKOBNRLVIROZNKOHUKOBRSNRVUIRSNRXVRUVOXVRXYUYSNVOHGVRLROLROLDYIRBRLYOBNROFEKLRBNRURBNRJYKOSNKOHCKOCYBNKOMKOBNRMKOHSNRPROLRURCKOHBNYXYJRKOXVRUVONYBNVLKDPRBYDJYKOSNKOHMVRIRKDTKOHJROHJYVCYGKRKOIRKJRPRLRLROHZNRLRLRNKRLDYQDYBNRIRKJRWROHWROHMKOUKOJYVEKRBNRSNYGKRMVONVSNVOXVRUVOIRKDLYVPRVLKOSNRBRUYLYJYOHYIRKOHBNRLRJRYURZNYRPROHAKOWYDGYLRBNRQDOHPRKOBKRIRKMYCYLDYEYIROHYUVOBNVTKOHIRSYRLYPROZNYUKOBNVOIRJRKOPROKRGVRBNRVUGYBNRMVRUVOXVREYGRSNROFBYDPRZVOFJRVMYEYGYWROHOFLYVJYOSYDLRGYOVOHWVOHEKBNVWYLREYVUSNRHYKOZNYOPRYGKOHSNKOHEYUYJYOBNVJRUVOUYDGYWROHPRVNKOHPYLRTKOHBKOZDOHBNRSNKDPROHMKOHPRJRKDLROSDOHCYPRLYQVSYDOFGYBNRSYDBKRSNVOBNRSKOHSNRBNYVUEKDBNRSNYMYLROHJRNYLROFSYDLROZNYPYNKOSNYIRJRKOBNRBNRBNRJRYZNYHYDEVBNRNYBNRGYEDOHCYLRKRBNYOFOKRIRKLYVJYOBKRGYWROHEKOHIRKOHLDOHJYVLROSNRBNRPRAROHZNYAYBNRJYURLYKDIRVUTKOHLRSNYGYSNYPYOFGYBKRBVPRVJYKOTRYTKOQDOHMVROFJYVLROPYNKOSNYERGKJYKOBKNYOWKSYDLRXRBNRLRUREYNKOOFBNRJROHGYBNRJYVNYEYBNRJRLKOJYKOVUOFLRMKOHLREKJYXROHSDYBNYJYKOXRKDGYQVEVJRUVOHLYNKOSNYGKJYKOBNDOHEVBNRLVSNYGYSNYKOHLROBKRGKRBNYSNRGYCYEYOFOKRIRKLYBNRLRLYVSKOURGYHDOHEKOHCYPYBNRSKOURNYLRJYLROHOFVUBROFOKRIRSNDYLRIRKOSYDIRKOMYURHDOHLRPYTKOHSNDYLROHXYBNYMYIRKWKJRJRYBNRSYRSNDYLROHJRVGYJYVHYMYOFOKRURLYLROGDTKOHSYRTVVUMKOHEYOFLDYBDOHBNRZNYXVOSNRJRVQVLDYZRWRWKOHBNRXROHGKDBNYOFLYVBRQVLRZNYVUSNRLR</span><br></pre></td></tr></table></figure></div>
 <h3 id="解密过程"><a href="#解密过程" class="headerlink" title="解密过程"></a>解密过程</h3><p>单表加密, 最常见的做法就是做词频分析.</p>
-<p>如果是英文文本的话, 用<a class="link"   href="https://quipqiup.com/" >quipqiup<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>很快就能得解.</p>
+<p>如果是英文文本的话, 用<a class="link"   target="_blank" rel="noopener" href="https://quipqiup.com/" >quipqiup<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>很快就能得解.</p>
 <p>但这里是中文拼音, 似乎没有现成的工具, 那就老老实实做词频分析.</p>
-<h4 id="统计聊斋全书的拼音词频"><a href="#统计聊斋全书的拼音词频" class="headerlink" title="统计聊斋全书的拼音词频"></a>统计聊斋全书的拼音词频</h4><p>首先要知道中文拼音的一般频率分布, 这里我直接网上找<a class="link"   href="https://www.isyd.net/books/37/" >《聊斋志异》<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>的txt文本.</p>
+<h4 id="统计聊斋全书的拼音词频"><a href="#统计聊斋全书的拼音词频" class="headerlink" title="统计聊斋全书的拼音词频"></a>统计聊斋全书的拼音词频</h4><p>首先要知道中文拼音的一般频率分布, 这里我直接网上找<a class="link"   target="_blank" rel="noopener" href="https://www.isyd.net/books/37/" >《聊斋志异》<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>的txt文本.</p>
 <p>去除前言什么的, 只留下小说部分, 保存txt为<code>sample.txt</code>, 运行如下代码 (GPT-4o)</p>
 <div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"><span class="keyword">from</span> pypinyin <span class="keyword">import</span> lazy_pinyin</span><br><span class="line"></span><br><span class="line"><span class="comment"># 函数：读取文本文件并去除标点符号、空格等非中文字符</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">clean_text</span>(<span class="params">filename</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        text = f.read()</span><br><span class="line">    <span class="comment"># 使用正则表达式去除标点符号和非汉字字符</span></span><br><span class="line">    text = re.sub(<span class="string">r&#x27;[^\u4e00-\u9fa5]&#x27;</span>, <span class="string">&#x27;&#x27;</span>, text)  <span class="comment"># 只保留中文字符</span></span><br><span class="line">    <span class="keyword">return</span> text</span><br><span class="line"></span><br><span class="line"><span class="comment"># 函数：提取拼音声母和韵母</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">extract_initial_and_final</span>(<span class="params">word</span>):</span><br><span class="line">    <span class="comment"># 声母，包括组合声母</span></span><br><span class="line">    initials = [<span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;p&#x27;</span>, <span class="string">&#x27;m&#x27;</span>, <span class="string">&#x27;f&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;t&#x27;</span>, <span class="string">&#x27;n&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;j&#x27;</span>, <span class="string">&#x27;q&#x27;</span>, <span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;z&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, <span class="string">&#x27;zh&#x27;</span>, <span class="string">&#x27;ch&#x27;</span>, <span class="string">&#x27;sh&#x27;</span>]</span><br><span class="line">    finals = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;u&#x27;</span>, <span class="string">&#x27;v&#x27;</span>, <span class="string">&#x27;ai&#x27;</span>, <span class="string">&#x27;ei&#x27;</span>, <span class="string">&#x27;ui&#x27;</span>, <span class="string">&#x27;ao&#x27;</span>, <span class="string">&#x27;ou&#x27;</span>, <span class="string">&#x27;iu&#x27;</span>, <span class="string">&#x27;ie&#x27;</span>, <span class="string">&#x27;ve&#x27;</span>, <span class="string">&#x27;er&#x27;</span>, <span class="string">&#x27;an&#x27;</span>, <span class="string">&#x27;en&#x27;</span>, <span class="string">&#x27;in&#x27;</span>, <span class="string">&#x27;un&#x27;</span>, <span class="string">&#x27;ün&#x27;</span>,</span><br><span class="line">              <span class="string">&#x27;ang&#x27;</span>, <span class="string">&#x27;eng&#x27;</span>, <span class="string">&#x27;ing&#x27;</span>, <span class="string">&#x27;ong&#x27;</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 使用pypinyin来获取拼音</span></span><br><span class="line">    pinyin_list = lazy_pinyin(word)</span><br><span class="line"></span><br><span class="line">    result = &#123;<span class="string">&#x27;initials&#x27;</span>: [], <span class="string">&#x27;finals&#x27;</span>: []&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> p <span class="keyword">in</span> pinyin_list:</span><br><span class="line">        <span class="comment"># 优先处理组合声母 zh, ch, sh</span></span><br><span class="line">        <span class="keyword">for</span> initial <span class="keyword">in</span> [<span class="string">&#x27;zh&#x27;</span>, <span class="string">&#x27;ch&#x27;</span>, <span class="string">&#x27;sh&#x27;</span>]:</span><br><span class="line">            <span class="keyword">if</span> p.startswith(initial):  <span class="comment"># 优先匹配组合声母</span></span><br><span class="line">                result[<span class="string">&#x27;initials&#x27;</span>].append(initial)</span><br><span class="line">                p = p[<span class="built_in">len</span>(initial):]  <span class="comment"># 去掉已经匹配的声母部分</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 处理剩余的普通声母</span></span><br><span class="line">        <span class="keyword">for</span> initial <span class="keyword">in</span> [<span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;p&#x27;</span>, <span class="string">&#x27;m&#x27;</span>, <span class="string">&#x27;f&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;t&#x27;</span>, <span class="string">&#x27;n&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;j&#x27;</span>, <span class="string">&#x27;q&#x27;</span>, <span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;z&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;r&#x27;</span>]:</span><br><span class="line">            <span class="keyword">if</span> p.startswith(initial):</span><br><span class="line">                result[<span class="string">&#x27;initials&#x27;</span>].append(initial)</span><br><span class="line">                p = p[<span class="built_in">len</span>(initial):]  <span class="comment"># 去掉已经匹配的声母部分</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 处理韵母</span></span><br><span class="line">        <span class="keyword">for</span> final <span class="keyword">in</span> finals:</span><br><span class="line">            <span class="keyword">if</span> p.endswith(final):</span><br><span class="line">                result[<span class="string">&#x27;finals&#x27;</span>].append(final)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="comment"># 函数：统计拼音声母和韵母的频率，同时生成拼音大写形式</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">count_pinyin</span>(<span class="params">text</span>):</span><br><span class="line">    initial_counter = Counter()</span><br><span class="line">    final_counter = Counter()</span><br><span class="line">    pinyin_list = []  <span class="comment"># 存储拼音的大写形式</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 遍历文本中的每个字</span></span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> text:</span><br><span class="line">        <span class="comment"># 提取每个字的声母和韵母</span></span><br><span class="line">        result = extract_initial_and_final(word)</span><br><span class="line">        <span class="comment"># 更新频率统计</span></span><br><span class="line">        initial_counter.update(result[<span class="string">&#x27;initials&#x27;</span>])</span><br><span class="line">        final_counter.update(result[<span class="string">&#x27;finals&#x27;</span>])</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 将拼音转换为大写并保存到pinyin_list</span></span><br><span class="line">        pinyin_list.extend(lazy_pinyin(word))</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 拼音大写并去除分隔符</span></span><br><span class="line">    pinyin_text = <span class="string">&#x27;&#x27;</span>.join([p.upper() <span class="keyword">for</span> p <span class="keyword">in</span> pinyin_list])</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 按照频率从大到小排序</span></span><br><span class="line">    sorted_initials = initial_counter.most_common()  <span class="comment"># 返回排序后的声母</span></span><br><span class="line">    sorted_finals = final_counter.most_common()      <span class="comment"># 返回排序后的韵母</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> sorted_initials, sorted_finals, pinyin_text</span><br><span class="line"></span><br><span class="line"><span class="comment"># 主函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    filename = <span class="string">&#x27;sample.txt&#x27;</span>  <span class="comment"># 中文文本文件路径</span></span><br><span class="line">    text = clean_text(filename)    <span class="comment"># 清理文本</span></span><br><span class="line">    </span><br><span class="line">    initial_freq, final_freq, pinyin_text = count_pinyin(text)  <span class="comment"># 统计声母和韵母频率，并获取拼音大写文本</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 输出声母频率，按频率从大到小排序</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;声母频数统计：&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> initial, count <span class="keyword">in</span> initial_freq:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;initial&#125;</span>: <span class="subst">&#123;count&#125;</span>&quot;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 输出韵母频率，按频率从大到小排序</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\n韵母频数统计：&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> final, count <span class="keyword">in</span> final_freq:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;final&#125;</span>: <span class="subst">&#123;count&#125;</span>&quot;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 将拼音大写文本写入到pinyin.txt文件中</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;pinyin.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> pinyin_file:</span><br><span class="line">        pinyin_file.write(pinyin_text)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure></div>
 
@@ -185,12 +653,329 @@
 <td>C</td>
 </tr>
 </tbody></table>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>Crypto</tag>
-      </tags>
-  </entry>
-</search>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> 一道简单的单表代换加密</li>
+        <li><strong>作者:</strong> Coast23</li>
+        <li><strong>创建于
+                :</strong> 2024-12-19 19:16:29</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2024-12-19 23:20:44
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://coast23.github.io/2024/12/19/一道简单的单表代换加密/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Crypto/">#Crypto</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2024/12/16/hello-world/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">Hello World</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">一道简单的单表代换加密</div>
+		<ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%AF%86%E8%BF%87%E7%A8%8B"><span class="nav-text">解密过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E8%81%8A%E6%96%8B%E5%85%A8%E4%B9%A6%E7%9A%84%E6%8B%BC%E9%9F%B3%E8%AF%8D%E9%A2%91"><span class="nav-text">统计聊斋全书的拼音词频</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E5%AF%86%E6%96%87%E7%9A%84%E8%AF%8D%E9%A2%91"><span class="nav-text">统计密文的词频</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%B9%E6%8D%AE%E6%8B%BC%E9%9F%B3%E8%8E%B7%E5%8F%96%E5%8E%9F%E6%96%87"><span class="nav-text">根据拼音获取原文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B1%82%E5%AF%86%E7%A0%81%E8%A1%A8"><span class="nav-text">求密码表</span></a></li></ol></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Coast23</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 2 篇文章
+                    </span>
+                    
+                        <span>
+                            共 3.2k 字
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="站内搜索您需要的内容..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/Swup.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupSlideTheme.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupProgressPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupScrollPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	<script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/imageViewer.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/utils.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/main.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/navbarShrink.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/scrollTopBottom.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/lightDarkSwitch.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/categoryList.js" ></script>
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/localSearch.js" ></script>
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/codeBlock.js" ></script>
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/lazyload.js" ></script>
+
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/runtime.js" ></script>
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/Typed.min.js" ></script>
+  <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/typed.js" ></script>
+
+
+
+
+
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/anime.min.js" ></script>
+
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/tocToggle.js" data-swup-reload-script></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/toc.js" data-swup-reload-script></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/tabs.js" data-swup-reload-script></script>
+
+
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+<script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/essays.js" data-swup-reload-script></script>
+
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/bookmarkNav.js" ></script>
+
+	
+</body>
+
+</html>
