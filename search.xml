@@ -179,7 +179,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Adworld Misc writeups</title>
+    <title>Adworld Misc Writeups</title>
     <url>/2025/01/11/Adworld-Misc-writeups/</url>
     <content><![CDATA[<p>记录<a class="link"   href="https://adworld.xctf.org.cn/" >Adworld<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> Misc的个人writeups.</p>
 <hr>
@@ -296,6 +296,90 @@
                 ></p>
 <p>Flag: <code>HITB&#123;CTFFUN&#125;</code></p>
 <hr>
+<h4 id="simple-transfer"><a href="#simple-transfer" class="headerlink" title="simple_transfer"></a>simple_transfer</h4><p>解压附件得到一个pcap文件.</p>
+<p>和<strong>心仪的公司</strong>一样, 先strings查一下字符串, 没查出来.</p>
+<p>打开<code>wireshark</code>分析流量, 发现全是<code>TCP</code>协议.</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2024/12/19/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%95%E8%A1%A8%E4%BB%A3%E6%8D%A2%E5%8A%A0%E5%AF%86/-writeups/11.png"
+                      alt="协议分级"
+                ></p>
+<p>实在不想<del>(其实是不会)</del>分析这堆流量包, 既然查不到明文, 且结合题目名, 这些流量里很可能藏有文件.</p>
+<p>直接<code>foremost</code>分离. (<code>binwalk</code>也行, 但<code>binwalk</code>似乎会把<code>PDF</code>文件再往下拆分, 这里用<code>foremost</code>更优.)</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2024/12/19/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%95%E8%A1%A8%E4%BB%A3%E6%8D%A2%E5%8A%A0%E5%AF%86/-writeups/12.png"
+                      alt="提取结果"
+                ></p>
+<p>Flag: <code>HITB&#123;b3d0e380e9c39352c667307d010775ca&#125;</code></p>
+<hr>
+<h4 id="Training-Stegano-1"><a href="#Training-Stegano-1" class="headerlink" title="Training-Stegano-1"></a>Training-Stegano-1</h4><p>附件是一张只有<code>102B</code>的<code>bmp</code>图片, 4x4像素.</p>
+<p>用<code>010 Editor</code>看看.</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2024/12/19/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%95%E8%A1%A8%E4%BB%A3%E6%8D%A2%E5%8A%A0%E5%AF%86/-writeups/13.png"
+                      alt="010 Editor"
+                ></p>
+<p>密码是<code>steganoI</code>. 这个是什么的密码?</p>
+<p>印象中没见过<code>bmp</code>的文件嵌入, 且这个文件大小不可能是密文或者文件嵌入, 试着直接提交<code>steganoI</code>, 显示正确.</p>
+<p>Flag: <code>steganoI</code></p>
+<hr>
+<h4 id="can-has-stdio"><a href="#can-has-stdio" class="headerlink" title="can_has_stdio?"></a>can_has_stdio?</h4><p>解压附件得到文件<code>misc50</code>.</p>
+<p>没有后缀, 用<code>file</code>命令确定文件类型:</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2024/12/19/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%95%E8%A1%A8%E4%BB%A3%E6%8D%A2%E5%8A%A0%E5%AF%86/-writeups/14.png"
+                      alt="file结果"
+                ></p>
+<p>既然是个文本, 那就直接<code>cat</code>看看.</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2024/12/19/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%95%E8%A1%A8%E4%BB%A3%E6%8D%A2%E5%8A%A0%E5%AF%86/-writeups/15.png"
+                      alt="cat结果"
+                ></p>
+<div class="code-container" data-rel="Brainfuck"><figure class="iseeu highlight brainfuck"><table><tr><td class="code"><pre><span class="line">                                                                              </span><br><span class="line">                                                                              </span><br><span class="line">                                      <span class="literal">+</span>                                       </span><br><span class="line">                                     <span class="literal">++</span>                                       </span><br><span class="line">                                     <span class="literal">+++</span>                                      </span><br><span class="line">                                    <span class="literal">++</span><span class="title">[</span>&gt;                                      </span><br><span class="line">                                    <span class="literal">+</span>&gt;<span class="literal">++</span>&gt;                                     </span><br><span class="line">                                   <span class="literal">+++</span>&gt;<span class="literal">++</span>                                     </span><br><span class="line">                                   <span class="literal">++</span>&gt;<span class="literal">++++</span>                                    </span><br><span class="line">                                  <span class="literal">+</span>&gt;<span class="literal">++++++</span>                                    </span><br><span class="line">                                  &gt;<span class="literal">+++++++</span>&gt;                                   </span><br><span class="line">                                 <span class="literal">++++++++</span>&gt;<span class="literal">+</span>                                   </span><br><span class="line">                                 <span class="literal">++++++++</span>&gt;<span class="literal">++</span>                                  </span><br><span class="line">                                <span class="literal">++++++++</span>&gt;<span class="literal">+++</span>                                  </span><br><span class="line">                                <span class="literal">++++++++</span>&gt;<span class="literal">++++</span>                                 </span><br><span class="line">          <span class="literal">++++++++</span>&gt;<span class="literal">+++++++++++++</span>&gt;<span class="literal">++++++++++++++</span>&gt;<span class="literal">+++++++++++++++</span>&gt;<span class="literal">++</span>            </span><br><span class="line">            <span class="literal">++++++++++++++</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<span class="literal">-</span><span class="title">]</span>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">--</span><span class="string">.</span><span class="literal">++</span>&lt;&lt;              </span><br><span class="line">              &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">----</span><span class="string">.</span><span class="literal">++++</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;                </span><br><span class="line">                &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">+</span><span class="string">.</span><span class="literal">-</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">-</span><span class="string">.</span><span class="literal">+</span>&lt;                  </span><br><span class="line">                  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">+++</span><span class="string">.</span><span class="literal">---</span>&lt;&lt;&lt;&lt;&lt;&lt;                    </span><br><span class="line">                    &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">---</span><span class="string">.</span><span class="literal">+++</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;                      </span><br><span class="line">                      &lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">+++</span><span class="string">.</span><span class="literal">---</span>&lt;&lt;&lt;&lt;&lt;                        </span><br><span class="line">                        &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">-</span><span class="string">.</span><span class="literal">+</span>&lt;&lt;                          </span><br><span class="line">                          &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;                            </span><br><span class="line">                          &gt;&gt;<span class="literal">----</span><span class="string">.</span><span class="literal">++++</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;                            </span><br><span class="line">                          &lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">+</span><span class="string">.</span><span class="literal">-</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;                            </span><br><span class="line">                         &lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">--</span><span class="string">.</span><span class="literal">++</span>&lt;&lt;&lt;                           </span><br><span class="line">                         &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">-</span><span class="string">.</span>                           </span><br><span class="line">                        <span class="literal">+</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;                          </span><br><span class="line">                        <span class="literal">+++</span><span class="string">.</span><span class="literal">---</span>&lt;&lt;&lt;&lt;&lt;&lt;   &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;                          </span><br><span class="line">                       &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">-</span><span class="string">.</span><span class="literal">+</span>&lt;       &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;                         </span><br><span class="line">                       &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;           &gt;&gt;&gt;<span class="literal">--</span><span class="string">.</span><span class="literal">++</span>&lt;                         </span><br><span class="line">                      &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;               &lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;                        </span><br><span class="line">                      &gt;&gt;&gt;&gt;&gt;&gt;                    &gt;&gt;&gt;<span class="literal">-</span><span class="string">.</span><span class="literal">+</span>                        </span><br><span class="line">                     &lt;&lt;&lt;&lt;&lt;                        &lt;&lt;&lt;&lt;&lt;                       </span><br><span class="line">                     &lt;&lt;&lt;                            &lt;&gt;&gt;                       </span><br><span class="line">                    &gt;&gt;                                &gt;&gt;                      </span><br><span class="line">                                                                              </span><br><span class="line">                                                                              </span><br><span class="line">                                                                              </span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">++</span><span class="string">.</span><span class="literal">--</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">-</span><span class="string">.</span><span class="literal">+</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">--</span><span class="string">.</span><span class="literal">++</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">---</span><span class="string">.</span><span class="literal">+++</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">--</span><span class="string">.</span><span class="literal">++</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">-</span><span class="string">.</span><span class="literal">+</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">+</span><span class="string">.</span><span class="literal">-</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">--</span><span class="string">.</span><span class="literal">++</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">----</span><span class="string">.</span><span class="literal">++++</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">-</span><span class="string">.</span><span class="literal">+</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="string">.</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">++</span><span class="string">.</span><span class="literal">--</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">-</span><span class="string">.</span><span class="literal">+</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">--</span><span class="string">.</span><span class="literal">++</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">+</span><span class="string">.</span><span class="literal">-</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">----</span><span class="string">.</span><span class="literal">++++</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="literal">---</span><span class="string">.</span><span class="literal">+++</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<span class="string">.</span></span><br></pre></td></tr></table></figure></div>
+
+<p>随便找个<a class="link"   href="https://ctf.bugku.com/tool/brainfuck" >Brainfuck解释器<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, 复制粘贴即可拿到flag.</p>
+<p>Flag: <code>flag&#123;esolangs_for_fun_and_profit&#125;</code></p>
+<hr>
+<h4 id="Erik-Baleog-and-Olaf-TODO"><a href="#Erik-Baleog-and-Olaf-TODO" class="headerlink" title="Erik-Baleog-and-Olaf (TODO)"></a>Erik-Baleog-and-Olaf (TODO)</h4><p>解压附件得到文件<code>stego100</code>, 用<code>file</code>确定是<code>PNG</code>文件:</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2024/12/19/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%95%E8%A1%A8%E4%BB%A3%E6%8D%A2%E5%8A%A0%E5%AF%86/-writeups/16.png"
+                      alt="stego100.png"
+                ></p>
+<p>我先用<code>010 Editor</code>看看文件尾有没有藏东西:</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2024/12/19/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%95%E8%A1%A8%E4%BB%A3%E6%8D%A2%E5%8A%A0%E5%AF%86/-writeups/17.png"
+                      alt="010 Editor"
+                ></p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://i.imgur.com/22kUrzm.png</span><br></pre></td></tr></table></figure></div>
+
+<p>访问这个URL, 来到这样一个网站:</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2024/12/19/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%95%E8%A1%A8%E4%BB%A3%E6%8D%A2%E5%8A%A0%E5%AF%86/-writeups/18.png"
+                      alt="Web"
+                ></p>
+<p>emmm, 没看出这个<code>hint</code>到底是啥意思, 先把这个网页放一边, 用<code>StegSolve</code>看看.</p>
+<p>在<code>Green plane 1</code>下, 可以看到中间有一个二维码:</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2024/12/19/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%95%E8%A1%A8%E4%BB%A3%E6%8D%A2%E5%8A%A0%E5%AF%86/-writeups/19.png"
+                      alt="StegSolve结果"
+                ></p>
+<p>但右下角未能完整显示, 扫不出来.</p>
+<p>在<code>Random colour map 1/2/3</code>反复刷, 也还是扫不出来, 难崩.</p>
 ]]></content>
       <categories>
         <category>CTF</category>
