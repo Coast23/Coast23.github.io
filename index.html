@@ -655,12 +655,19 @@ mjx-container[display="true"] + br {
                     <div class="home-article-content markdown-body">
                         
                             
-                            Operator Precedence25 XCPC 寒假集训班Day1 练习题 E题
-题目描述
+                            25 XCPC 寒假集训班Day1 练习题 E题题目描述
 个人解答题目不允许出现因子0, 那就配凑1, 尝试把除首项和末项外的因子全部配成1.
 很容易想到构造:
-$$\begin{align}a_1, \ \underbrace{2, \ -1, \ 2, \ -1, \ \cdots}{共n-2个数}, \ a{2n}\end{align}$$
-这样...
+
+这样一来, 题目的式子就变成了:
+
+直接令  , 可以解出
+
+于是我们就得到了这样一个合法的构造:
+共个数
+做完了.
+AC Code:
+#include &lt;cstdio&gt;int T, n;int main(){    ...
                         
                     </div>
 
