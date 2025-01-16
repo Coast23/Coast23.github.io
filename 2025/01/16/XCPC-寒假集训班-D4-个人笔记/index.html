@@ -36,7 +36,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://coast23.github.io/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-01-16T12:38:31.000Z">
-<meta property="article:modified_time" content="2025-01-16T16:22:49.971Z">
+<meta property="article:modified_time" content="2025-01-16T16:25:33.695Z">
 <meta property="article:author" content="Coast23">
 <meta property="article:tag" content="图论">
 <meta property="article:tag" content="树">
@@ -540,8 +540,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-01-17 00:22:49</span>
-            <span class="mobile">2025-01-17 00:22:49</span>
+            <span class="desktop">2025-01-17 00:25:33</span>
+            <span class="mobile">2025-01-17 00:25:33</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -587,7 +587,7 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>4k 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>4.1k 字</span>
         </span>
     
     
@@ -727,6 +727,7 @@ mjx-container[display="true"] + br {
 </li>
 </ul>
 <p>所以, 直接把边权摊给点权, 然后两个人每次都贪心选择最大点权, 作差即得答案.</p>
+<p>通过将输入的点权乘以 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="1.507ex" role="img" focusable="false" viewBox="0 -666 500 666"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></svg></mjx-container> 来避免除法.</p>
 <p>AC Code:</p>
 <div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctype.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 10005</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">long</span> <span class="type">long</span> a[N];</span><br><span class="line"><span class="type">long</span> <span class="type">long</span> ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">read</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>, f = <span class="number">1</span>; <span class="type">char</span> ch = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">for</span>(; !<span class="built_in">isdigit</span>(ch); ch = <span class="built_in">getchar</span>()) f ^= (ch == <span class="string">'-'</span>);</span><br><span class="line">    <span class="keyword">for</span>(; <span class="built_in">isdigit</span>(ch); ch = <span class="built_in">getchar</span>()) x = (x &lt;&lt; <span class="number">3</span>) + (x &lt;&lt; <span class="number">1</span>) + (ch <span class="keyword">xor</span> <span class="number">48</span>);</span><br><span class="line">    <span class="keyword">return</span> f? x : -x;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    n = <span class="built_in">read</span>(); m = <span class="built_in">read</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) a[i] = <span class="built_in">read</span>() &lt;&lt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; ++i){</span><br><span class="line">        <span class="type">int</span> x = <span class="built_in">read</span>(), y = <span class="built_in">read</span>(), v = <span class="built_in">read</span>();</span><br><span class="line">        a[x] += v, a[y] += v;</span><br><span class="line">    }</span><br><span class="line">    std::<span class="built_in">stable_sort</span>(&amp;a[<span class="number">1</span>], &amp;a[n<span class="number">+1</span>]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = n; i; i -= <span class="number">2</span>) ans += a[i] - a[i<span class="number">-1</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, ans &gt;&gt; <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 		</div>
@@ -742,7 +743,7 @@ mjx-container[display="true"] + br {
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-01-17 00:22:49
+                    :</strong> 2025-01-17 00:25:33
             </li>
         
         <li>
