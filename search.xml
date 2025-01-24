@@ -665,7 +665,7 @@
 
   <div class="note-large info">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
-      <i class="notel-icon fa-solid fa-circle-info"></i><p><strong>Huffman Tree 性质一: 最优子结构</strong></p>
+      <i class="notel-icon fa-solid fa-circle-info"></i><p><strong>Huffman Tree具有最优子结构</strong></p>
 
     </div>
     <div class="notel-content">
