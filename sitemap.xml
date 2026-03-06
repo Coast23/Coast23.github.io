@@ -488,7 +488,7 @@
 
   
   <url>
-    <loc>https://coast23.github.io/tags/Misc/</loc>
+    <loc>https://coast23.github.io/tags/Re/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -502,14 +502,14 @@
   </url>
   
   <url>
-    <loc>https://coast23.github.io/tags/Re/</loc>
+    <loc>https://coast23.github.io/tags/Web/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://coast23.github.io/tags/Web/</loc>
+    <loc>https://coast23.github.io/tags/Misc/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -572,13 +572,6 @@
   </url>
   
   <url>
-    <loc>https://coast23.github.io/tags/ICPC/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://coast23.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -587,6 +580,13 @@
   
   <url>
     <loc>https://coast23.github.io/tags/GoogLeNet/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://coast23.github.io/tags/ICPC/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -614,13 +614,6 @@
   </url>
   
   <url>
-    <loc>https://coast23.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://coast23.github.io/tags/ResNet/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -629,6 +622,13 @@
   
   <url>
     <loc>https://coast23.github.io/tags/Arch/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://coast23.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -705,13 +705,6 @@
   </url>
   
   <url>
-    <loc>https://coast23.github.io/tags/DOS/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://coast23.github.io/tags/%E5%93%81%E8%AF%84/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -727,6 +720,13 @@
   
   <url>
     <loc>https://coast23.github.io/tags/Crypto/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://coast23.github.io/tags/DOS/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -791,14 +791,14 @@
 
   
   <url>
-    <loc>https://coast23.github.io/categories/CTF/</loc>
+    <loc>https://coast23.github.io/categories/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://coast23.github.io/categories/%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://coast23.github.io/categories/CTF/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
